@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Quatumblog_mobile
+    = stylesheet_link_tag 'mobile', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'mobile', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    p
+      -if mobile_device?
+        =link_to "电脑版", :mobile=>0
+      -else
+        =link_to "手机版", :mobile=>1
+    = yield
