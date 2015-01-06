@@ -1,0 +1,45 @@
+@import "bootstrap";
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #e1e1e1;
+}
+
+$margin-left: 4%;
+.header{
+  text-align: left;
+  margin-left: $margin-left;
+}
+
+.blog-show{
+  background-color: #c2ffcb;
+  border: 1px solid gray;
+  border-radius: 30px;
+  margin: 0 $margin-left;
+  padding: 3%;
+  display: block;
+  height: 80vh;
+  overflow: scroll;
+  .blog-title{
+    text-align: center;
+    font-size: 350%;
+  }
+  .blog-content{
+    font-size: 200%;
+  }
+  .edit-links{
+    font-size: 100%;
+    a{
+      font-size: 400%;
+    }
+  }
+}
+
+.btn{
+  margin-right: 10%;
+  font-size: 400%;
+}
+

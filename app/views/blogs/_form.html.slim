@@ -1,15 +1,20 @@
-= form_for @blog do |f|
-  - if @blog.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@blog.errors.count, "error")} prohibited this blog from being saved:"
-      ul
-        - @blog.errors.full_messages.each do |message|
-          li = message
+/= form_for @blog do |f|
+/  - if @blog.errors.any?
+/    #error_explanation
+/      h2 = "#{pluralize(@blog.errors.count, "error")} prohibited this blog from being saved:"
+/      ul
+/        - @blog.errors.full_messages.each do |message|
+/          li = message
+/
+/  .field
+/    = f.label :title
+/    = f.text_field :title
+/  .field
+/    = f.label :content
+/    = f.text_area :content
+/  .actions = f.submit 'Save'
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :content
-    = f.text_field :content
-  .actions = f.submit 'Save'
+= semantic_form_for @blog do |f|
+  = f.input :title, :label => "标题", :prepend => '@'
+  = f.input :content, :label => "正文"
+  = f.actions :submit, :button_html =>{:class=> 'btn btn-default'}

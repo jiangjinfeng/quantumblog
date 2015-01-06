@@ -1,0 +1,13 @@
+/h2.blog-title hello world
+
+- @blogs.each do |blog|
+  p.blog-title
+    =blog.title
+  p.blog-content
+     =blog.content
+  p.edit-links
+    = link_to link_to 'Show', blog, class: 'btn btn-default'
+    = link_to 'Edit', edit_blog_path(blog), class: 'btn btn-default'
+    = link_to 'Destroy', blog, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-default'
+p
+  = link_to '新建', new_blog_path

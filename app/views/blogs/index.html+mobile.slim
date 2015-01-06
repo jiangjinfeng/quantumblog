@@ -1,21 +1,4 @@
 
-h1 手机视图
-table
-  thead
-    tr
-      th Title
-      th Content
-      th
-      th
-      th
-
-  tbody
-    - @blogs.each do |blog|
-      tr
-        td = blog.title
-        td = blog.content
-        td = link_to 'Show', blog
-        td = link_to 'Edit', edit_blog_path(blog)
-        td = link_to 'Destroy', blog, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-  br
+h1.header 手机博客
+div.blog-show
+  = render :partial => 'blog_list'

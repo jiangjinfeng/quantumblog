@@ -7,6 +7,8 @@ p
   strong Content:
   = @blog.content
 
-= link_to 'Edit', edit_blog_path(@blog)
+= link_to 'Edit', edit_blog_path(@blog), class: 'btn btn-default'
 '|
-= link_to 'Back', blogs_path
+= link_to 'Back', blogs_path, class: 'btn btn-default'
+
+/= render :partial => ''

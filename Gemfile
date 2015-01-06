@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'slim-rails'
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'formtastic', '~> 3.0'
+gem 'formtastic-bootstrap'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
